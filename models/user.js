@@ -9,7 +9,37 @@ const userSchema = new Schema({
         unique: true,
         //This is supposed to match a valid email using regex
         match: [/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/, 'Please Enter a valid Email Address!']
+    },
+    thoughts: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'thought',
+        },
+    ],
+    friends: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'user',
+        },
+    ]
+},
+    {
+        toJSON: {
+            virtuals: true,
+        },
+        id: false,
     }
+);
 
+// Create a virtual property 
+userSchema
+    .virtual('friendCount')
+    // Getter
+    .get(function () {
+        return this.username.length;
+    });
 
-})
+// Initialize
+const User = model('user', userSchema);
+
+module.exports = User;

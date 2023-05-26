@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-const reactionSchema = require('./react');
+const reactSchema = require('./react');
 
 // Schema to create Post model
 const thoughtSchema = new Schema({
@@ -8,6 +8,26 @@ const thoughtSchema = new Schema({
     username: { type: String, required: true },
 
     reactions: [reactSchema]
-}
+},
+{
+    toJSON: {
+        getters: true,
+        virtuals: true,
+    },
+    id: false,
+  }
+  );
+  
+  // Create a virtual
+  thoughtSchema
+    .virtual('reactCount')
 
-)
+    .get(function () {
+      return this.react.length;
+    }
+);
+
+// Initialize
+const Thought = model('thought', thoughtSchema);
+
+module.exports = Thought;
