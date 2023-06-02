@@ -15,7 +15,7 @@ connection.once('open', async () => {
 
   // Create user and thought
   const userDB = await User.insertMany(userData);
-  const thoughtDB = await Thought.insertMany(thoughtData);
+  const thoughtDB = await Thoughts.insertMany(thoughtData);
   console.log('users and thoughts seeded');
 
   // Insert Thoughts into the users thought array
