@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Video Link
-[Click Here!](video link here)
+[Click Here!](https://drive.google.com/file/d/1xcxoHLMYFDpO7pp68DYb3d85UONV13R5/view)
 
 ## Description
 Friend2Friend is a social network api for a social network web application where users can share their thoughts, react to friends thoughts, and create a friend list.

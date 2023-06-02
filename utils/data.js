@@ -49,7 +49,7 @@ const thoughtData = [
     },
     {
         'thoughtText': 'Gotta go fast',
-        'username': 'hypersonic17',
+        'username': 'stylishqueen5',
         
     },
 ];
@@ -57,27 +57,27 @@ const thoughtData = [
 const reactionData = [
     {
       'reactionBody': 'Yo thats sick!',
-      'username': 'slyguy94',
+      'username': 'flyhigh',
      
     },
     {
       'reactionBody': 'Amazing',
-      'username': 'pacman24',
+      'username': 'pcman123',
       
     },
     {
       'reactionBody': 'Excellent',
-      'username': 'hypersonic17',
+      'username': 'dancegavindance890',
      
     },
     {
       'reactionBody': 'Yessir!',
-      'username': 'gentlegiant63',
+      'username': 'runrunjen1985',
        
     },
     {
       'reactionBody': 'Keep fighting',
-      'username': 'birdboy48',
+      'username': 'stylishqueen5',
       
     },
   ];
