@@ -1,5 +1,5 @@
 const connection = require('../config/connections');
-const { User, Thought } = require('../models');
+const { User, Thoughts } = require('../models');
 const { userData, thoughtData, reactionData } = require('./data');
 
 connection.on('error', (err) => err);
@@ -9,9 +9,9 @@ connection.once('open', async () => {
 
   // Drop existing data
   await User.deleteMany({});
-  await Thought.deleteMany({});
+  await Thoughts.deleteMany({});
   
-  console.log('deleted user, thought, and reaction data!');
+  console.log('deleted user, thoughts, and reaction data!');
 
   // Create user and thought
   const userDB = await User.insertMany(userData);
