@@ -30,27 +30,27 @@ const thoughtData = [
     {
         'thoughtText': 'My game might be old but its a classic',
         'username': 'pcman123',
-        'reactions': []
+        
     },
     {
         'thoughtText': 'Check me out in this tournament next week',
         'username': 'runrunjen1985',
-        'reactions': []
+        
     },
     {
         'thoughtText': 'I believe I can touch the sky',
         'username': 'flyhigh8',
-        'reactions': []
+        
     },
     {
         'thoughtText': 'CANT WAIT FOR THE CONCERT',
         'username': 'dancegavindance890',
-        'reactions': []
+        
     },
     {
         'thoughtText': 'Gotta go fast',
         'username': 'hypersonic17',
-        'reactions': []
+        
     },
 ];
 
@@ -83,15 +83,15 @@ const reactionData = [
   ];
   
   //Pushing reactions into the thoughts db
-  function addReactionToThought() {
-    reactionData.forEach(reaction => {
-      const thought = thoughtData.find(thought => thought.username === reaction.username);
-      if (thought) {
-        thought.reactions.push(reaction);
-      }
-    });
-  }
+  // function addReactionToThought() {
+  //   reactionData.forEach(reaction => {
+  //     const thought = thoughtData.find(thought => thought.username === reaction.username);
+  //     if (thought) {
+  //       thought.reactions.push(reaction);
+  //     }
+  //   });
+  // }
   
-  addReactionToThought();
+  // addReactionToThought();
 
   module.exports = { userData, thoughtData }

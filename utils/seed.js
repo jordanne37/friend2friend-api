@@ -19,12 +19,12 @@ connection.once('open', async () => {
   console.log('users and thoughts seeded');
 
   // Insert Thoughts into the users thought array
-  for (let i = 0; i < thoughtDB.length; i++) {
-    const thought = thoughtDB[i];
-    const user = userDB.find((user) => user.username === thought.username);
-    user.thoughts.push(thought);
-    await user.save();
-  }
+  // for (let i = 0; i < thoughtDB.length; i++) {
+  //   const thought = thoughtDB[i];
+  //   const user = userDB.find((user) => user.username === thought.username);
+  //   user.thoughts.push(thought);
+  //   await user.save();
+  // }
 
 
   console.log('reactions seeded');
